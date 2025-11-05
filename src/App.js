@@ -17,11 +17,9 @@ export default function App() {
   const ref = useRef();
 
   useEffect(() => {
-    // fit view once rendered
-    const id = setTimeout(() => {
+    setTimeout(() => {
       ref.current?.zoomToFit(400, 40);
     }, 200);
-    return () => clearTimeout(id);
   }, []);
 
   return (
